@@ -16,6 +16,7 @@ else
 fi
 
 #SOFTWARE INSTALL
+echo "software install starting ..."
 apt update -qq && apt upgrade -qq && apt install -qq git unzip php php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-tokenizer php-imagick mariadb-server
 
 #WORDPRESS INSTALL
