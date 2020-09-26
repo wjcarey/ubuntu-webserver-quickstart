@@ -23,6 +23,7 @@ INSTALL_PATH = /var/www/html
 echo "Confirm  wordpress installation in "${INSTALL_PATH}", Do you want to continue? [Y/n]"
 read CONFIRM_INSTALL_LOCATION
 if [ "$CONFIRM_INSTALL_LOCATION" != "${CONFIRM_INSTALL_LOCATION#[Yy]}" ] ;then
+    rm ${INSTALL_PATH}/index.html
     wget "https://wordpress.org/latest.zip" -P ${INSTALL_PATH}
     unzip ${INSTALL_PATH}/latest.zip -d ${INSTALL_PATH}
     mv ${INSTALL_PATH}/wordpress/* ${INSTALL_PATH}
