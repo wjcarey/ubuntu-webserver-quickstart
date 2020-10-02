@@ -16,6 +16,6 @@ sudo curl -o apache2-modify-conf.sh https://raw.githubusercontent.com/wjcarey/ap
 echo "downlaoding wordpress install script from github ..."
 sudo curl -o wordpress-install.sh https://raw.githubusercontent.com/wjcarey/wordpress-install/master/wordpress-install.sh && sudo chmod 777 wordpress-install.sh && sudo ./wordpress-install.sh
 
-echo "Success: installation complete ..."
+echo "success: installation complete ..."
 rm -- "$0"
 exit
