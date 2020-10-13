@@ -14,6 +14,8 @@ echo "\e[32menter the full path for your wordpress installation ...\e[39m"
 read INSTALL_PATH
 echo "\e[32mwhat domain name will you use for this wordpress ...\e[39m"
 read DOMAIN_NAME
+echo "\e[32mwhat email address would you like to use for renewal notices ...\e[39m"
+read NOTICE_EMAIL
 
 #SWAPFILE
 echo "downloading swapfile script from github ..."
@@ -33,7 +35,7 @@ sudo curl -o wordpress-install.sh https://raw.githubusercontent.com/wjcarey/word
 
 #CERTBOT INSTALL
 echo "downloading certbot install script from github ..."
-sudo curl -o apache2-certbot.sh https://raw.githubusercontent.com/wjcarey/apache2-certbot/main/apache2-certbot.sh && sudo chmod 777 apache2-certbot.sh && sudo ./apache2-certbot.sh ${INSTALL_PATH} ${DOMAIN_NAME}
+sudo curl -o apache2-certbot.sh https://raw.githubusercontent.com/wjcarey/apache2-certbot/main/apache2-certbot.sh && sudo chmod 777 apache2-certbot.sh && sudo ./apache2-certbot.sh ${INSTALL_PATH} ${DOMAIN_NAME} ${NOTICE_EMAIL}
 
 echo "success: installation complete ..."
 rm -- "$0"
