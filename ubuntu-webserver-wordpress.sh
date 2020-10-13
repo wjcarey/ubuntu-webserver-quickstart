@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #preinstall arguments
-echo -e "\e[32would you like to create a 2G swapfile? [Y/n]"
+echo -e "\e[32mwould you like to create a 2G swapfile? [Y/n]"
 read SWAP_CONFIRM
 echo -e "\e[32mcreate your database Name ..."
 read DATABASE_NAME
