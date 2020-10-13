@@ -1,8 +1,10 @@
 #!/bin/sh
 
-#preinstall arguments
+#SWAP ARGUMENTS
 echo "\e[32mwould you like to create a 2G swapfile? [Y/n]\e[39m"
 read SWAP_CONFIRM
+
+#DATABASE ARGUMENTS
 echo "\e[32mcreate your database Name ...\e[39m"
 read DATABASE_NAME
 echo "\e[32mcreate your username ...\e[39m"
@@ -10,8 +12,12 @@ read DATABASE_USER
 echo "\e[32mcreate your password...\e[39m"
 read DATABASE_PASS
 echo "\e[39mdatabase: \e[32m${DATABASE_NAME}\e[39m, user: \e[32m${DATABASE_USER}\e[39m, password: \e[32m${DATABASE_PASS} \e[39m"
+
+#WORDPRESS ARGUMENTS
 echo "\e[32menter the full path for your wordpress installation ...\e[39m"
 read INSTALL_PATH
+
+#CERTBOT ARGUMENTS
 echo "\e[32mwhat domain name will you use for this wordpress ...\e[39m"
 read DOMAIN_NAME
 echo "\e[32mwhat email address would you like to use for renewal notices ...\e[39m"
