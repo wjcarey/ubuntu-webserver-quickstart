@@ -1,20 +1,18 @@
 #!/bin/sh
 
 #preinstall arguments
-echo "\e[32mwould you like to create a 2G swapfile? [Y/n]"
+echo "\e[32mwould you like to create a 2G swapfile? [Y/n]\e[39m"
 read SWAP_CONFIRM
-echo "\e[32mcreate your database Name ..."
+echo "\e[32mcreate your database Name ...\e[39m"
 read DATABASE_NAME
-echo "\e[32mcreate your username ..."
+echo "\e[32mcreate your username ...\e[39m"
 read DATABASE_USER
-echo "\e[32mcreate your password..."
+echo "\e[32mcreate your password...\e[39m"
 read DATABASE_PASS
-echo "database: \e[32m${DATABASE_NAME}\e[39m, user: \e[32m${DATABASE_USER}\e[39m, password: \e[32m${DATABASE_PASS}"
-echo "\e[32menter the full path for your wordpress installation ..."
+echo "\e[39mdatabase: \e[32m${DATABASE_NAME}\e[39m, user: \e[32m${DATABASE_USER}\e[39m, password: \e[32m${DATABASE_PASS} \e[39m"
+echo "\e[32menter the full path for your wordpress installation ...\e[39m"
 read INSTALL_PATH
-echo "\e[32mconfirm  wordpress installation in ${INSTALL_PATH}, Do you want to continue? [Y/n]"
-read CONFIRM_INSTALL_LOCATION
-echo "\e[32mwhat domain name will you use for this wordpress ..."
+echo "\e[32mwhat domain name will you use for this wordpress ...\e[39m"
 read DOMAIN_NAME
 
 #SWAPFILE
